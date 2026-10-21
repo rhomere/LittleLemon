@@ -1,22 +1,25 @@
 import React from "react"
 import small_logo from "../images/small_logo.png"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return(
         <footer>
             <section>
             <div>
-                <img src={small_logo} />
+                <Link to="/" aria-label="Little Lemon home">
+                    <img src={small_logo} alt="Little Lemon" />
+                </Link>
             </div>
             <div>
                 <h3>Document Navigation</h3>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Menu</li>
-                <li>Reservations</li>
-                <li>Order Online</li>
-                <li>Login</li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/menu">Menu</Link></li>
+                <li><Link to="/reservations">Reservations</Link></li>
+                <li><Link to="/order-online">Order Online</Link></li>
+                <li><Link to="/login">Login</Link></li>
             </ul>
             </div>
             <div>

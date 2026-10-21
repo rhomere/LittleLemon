@@ -11,10 +11,10 @@ const Header = () => {
             <h2>Little Lemon</h2>
             <h3>Miami</h3>
             <p>We are a family owned Mediterraneran restaurant, focused on traditional recipes servred with a modern twist.</p>
-            <Link to="/Booking"><button aria-label="On Click">Reserve Table</button></Link>
+            <Link to="/reservations"><button aria-label="On Click">Reserve Table</button></Link>
             </div>
             <div>
-                <img src={food1} />
+                <img src={food1} alt="A fresh Little Lemon dish" />
             </div>
             </section>
         </header>

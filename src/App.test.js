@@ -1,9 +1,6 @@
-import { fireEvent, render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import BookingForm from './components/BookingForm';
-import Header from './components/Header';
 
 test('Renders the Header heading', () => {
     render(<BrowserRouter><App /></BrowserRouter>);
@@ -28,3 +25,23 @@ test('Initialize/Update Times', () => {
 
 
 })
+
+test('Navigation links open their dedicated pages', () => {
+  render(<BrowserRouter><App /></BrowserRouter>);
+  const navigation = within(screen.getByRole('navigation'));
+
+  fireEvent.click(navigation.getByRole('link', { name: 'About' }));
+  expect(screen.getByRole('heading', { name: 'About Little Lemon' })).toBeInTheDocument();
+
+  fireEvent.click(navigation.getByRole('link', { name: 'Menu' }));
+  expect(screen.getByRole('heading', { name: 'Our Menu' })).toBeInTheDocument();
+
+  fireEvent.click(navigation.getByRole('link', { name: 'Reservations' }));
+  expect(screen.getByLabelText('Choose Date')).toBeInTheDocument();
+
+  fireEvent.click(navigation.getByRole('link', { name: 'Order Online' }));
+  expect(screen.getByRole('heading', { name: 'Order Online' })).toBeInTheDocument();
+
+  fireEvent.click(navigation.getByRole('link', { name: 'Login' }));
+  expect(screen.getByRole('heading', { name: 'Welcome Back' })).toBeInTheDocument();
+});
