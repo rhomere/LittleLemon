@@ -25,17 +25,17 @@ const Footer = () => {
             <div>
                 <h3>Contact</h3>
             <ul>
-                <li>Address</li>
-                <li>Phone Number</li>
-                <li>Email</li>
+                <li>4501 SE 2nd St, Miami, FL 33133</li>
+                <li>PH: (305) 555-1234</li>
+                <li>Email: info@littlelemon.com</li>
             </ul>
             </div>
             <div>
                 <h3>Social Media Links</h3>
             <ul>
-                <li>Address</li>
-                <li>Phone Number</li>
-                <li>Email</li>
+                <li><a href="https://facebook.com/littlelemon" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://twitter.com/littlelemon" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="https://instagram.com/littlelemon" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             </ul>
             </div>
             </section>
